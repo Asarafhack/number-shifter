@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Real-Time Number System Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="grid-overlay"></div>
+        <div class="particle-field">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <h1>Number System Converter</h1>
+            </div>
+            <div class="subtitle">Real-time • Futuristic • Interactive</div>
+        </header>
+
+        <div class="converter-grid">
+            <!-- Decimal System -->
+            <div class="converter-card decimal-card" data-system="decimal">
+                <div class="card-header">
+                    <div class="system-info">
+                        <h3>Decimal</h3>
+                        <span class="base-info">Base 10</span>
+                        <div class="info-tooltip" data-tooltip="Decimal system uses digits 0-9. Most common number system used in daily life.">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9,9h0a3,3,0,0,1,6,0c0,2-3,3-3,3"></path>
+                                <path d="M12,17h0"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-system="decimal">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5,15H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H15a2,2,0,0,1,2,2V5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="decimal" class="number-input decimal-input" placeholder="Enter decimal number..." maxlength="15">
+                    <div class="input-glow"></div>
+                    <div class="validation-message" id="decimal-validation"></div>
+                </div>
+                <div class="shortcuts">Ctrl + 1</div>
+            </div>
+
+            <!-- Binary System -->
+            <div class="converter-card binary-card" data-system="binary">
+                <div class="card-header">
+                    <div class="system-info">
+                        <h3>Binary</h3>
+                        <span class="base-info">Base 2</span>
+                        <div class="info-tooltip" data-tooltip="Binary system uses only 0 and 1. Foundation of all digital computing systems.">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9,9h0a3,3,0,0,1,6,0c0,2-3,3-3,3"></path>
+                                <path d="M12,17h0"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-system="binary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5,15H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H15a2,2,0,0,1,2,2V5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="binary" class="number-input binary-input" placeholder="Enter binary number..." maxlength="32">
+                    <div class="input-glow"></div>
+                    <div class="validation-message" id="binary-validation"></div>
+                </div>
+                <div class="shortcuts">Ctrl + 2</div>
+            </div>
+
+            <!-- Octal System -->
+            <div class="converter-card octal-card" data-system="octal">
+                <div class="card-header">
+                    <div class="system-info">
+                        <h3>Octal</h3>
+                        <span class="base-info">Base 8</span>
+                        <div class="info-tooltip" data-tooltip="Octal system uses digits 0-7. Often used in computing for file permissions.">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9,9h0a3,3,0,0,1,6,0c0,2-3,3-3,3"></path>
+                                <path d="M12,17h0"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-system="octal">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5,15H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H15a2,2,0,0,1,2,2V5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="octal" class="number-input octal-input" placeholder="Enter octal number..." maxlength="11">
+                    <div class="input-glow"></div>
+                    <div class="validation-message" id="octal-validation"></div>
+                </div>
+                <div class="shortcuts">Ctrl + 3</div>
+            </div>
+
+            <!-- Hexadecimal System -->
+            <div class="converter-card hex-card" data-system="hexadecimal">
+                <div class="card-header">
+                    <div class="system-info">
+                        <h3>Hexadecimal</h3>
+                        <span class="base-info">Base 16</span>
+                        <div class="info-tooltip" data-tooltip="Hexadecimal uses 0-9 and A-F. Widely used in programming for colors and memory addresses.">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9,9h0a3,3,0,0,1,6,0c0,2-3,3-3,3"></path>
+                                <path d="M12,17h0"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="copy-btn" data-system="hexadecimal">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5,15H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H15a2,2,0,0,1,2,2V5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="hexadecimal" class="number-input hex-input" placeholder="Enter hex number..." maxlength="8">
+                    <div class="input-glow"></div>
+                    <div class="validation-message" id="hexadecimal-validation"></div>
+                </div>
+                <div class="shortcuts">Ctrl + 4</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn swap-btn" id="swapBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3,8L7,12L3,16"></path>
+                    <path d="M21,8L17,12L21,16"></path>
+                    <path d="M7,12H17"></path>
+                </svg>
+                Swap Direction
+            </button>
+            <button class="control-btn clear-btn" id="clearBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3,6H5H21"></path>
+                    <path d="M8,6V4A2,2,0,0,1,10,2H14a2,2,0,0,1,2,2V6M19,6V20a2,2,0,0,1-2,2H7a2,2,0,0,1-2-2V6H19Z"></path>
+                </svg>
+                Clear All
+            </button>
+        </div>
+
+        <div class="conversion-animation" id="conversionAnimation">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+
+    <!-- Toast notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
